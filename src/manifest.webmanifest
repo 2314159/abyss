@@ -1,8 +1,8 @@
 {
-  "name": "abyss",
-  "short_name": "abyss",
-  "theme_color": "#1976d2",
-  "background_color": "#fafafa",
+  "name": "Abyss",
+  "short_name": "Abyss",
+  "theme_color": "#0e0e11",
+  "background_color": "#0e0e11",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",
