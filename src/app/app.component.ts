@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   template: `
     <div class="app">
-      <div class="dot" [ngClass]="{ 'dot--invisible': timer }"></div>
+      <div class="dot" [ngClass]="{ 'dot--invisible': timer }" (click)="animate = !animate"></div>
       <!-- <h1 (click)="reset()">{{ timer }}</h1> -->
     </div>
   `,
@@ -43,10 +43,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   timer = 0;
+  animate = true;
   
   ngOnInit() {
     setInterval(() => {
-      this.timer = (this.timer + 1) % 2;
+      if (this.animate) {
+        this.timer = (this.timer + 1) % 2;
+      }
     }, 2000);
   }
 
